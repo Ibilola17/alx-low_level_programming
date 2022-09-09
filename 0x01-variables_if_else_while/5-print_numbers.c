@@ -1,23 +1,16 @@
-# include <stdio.h>
-
+#include <stdio.h>
 /**
- * main-Prints the number since 0 to 9
+ * main - entry point
  *
- * Return:Always(Success)
+ * Return: always return 0
  */
 int main(void)
 {
-	char n;
+	int a = 0;
 
-	for(n = '0';n <= '9';n++)
-	{
-		putchar(n)
-	}
-
+	for ( ; a < 10 ; a++)
+		printf("%d", a);
 	putchar('\n');
+	return (0);
 }
-putchar('\n');
 
-return (0);
-
-}
