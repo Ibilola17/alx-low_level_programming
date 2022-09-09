@@ -1,34 +1,30 @@
 #include <stdio.h>
-
 /**
- * main - print single digit number starting from 0
+ * main - entry point
  *
- * Return:returns zero at the end
+ * Return: always return 0
  */
 int main(void)
 {
-	int i, j;
+	int i;
+	int j;
 
-
-	for (i = 0; i <=0; i++)
+	for (i = 10; i <= 19; i++)
 	{
-		for (j = 1; j < = 9; j++)
+		for (j = 10; j <= 19; j++)
 		{
-			if (j > i)
+			if ((j % 10) > (i % 10))
 			{
-
-				putchar(i + '0');
-				putchar(j + '0');
-				if (i !=8)
-
+				putchar((i % 10) + '0');
+				putchar((j % 10) + '0');
+				if (i != 18 || j != 19)
 				{
-					putchar(',')
-						putchar(' ');
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
-
 	putchar('\n');
 	return (0);
 }
