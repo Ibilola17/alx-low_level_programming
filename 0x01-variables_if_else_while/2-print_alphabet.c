@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - entry point
  *
- * Return: Always 0 (Seccess/correct)
+ * Return: always returns 0
  */
 int main(void)
 {
-	chat alphabet;
-	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
-	{
-		putchar(alphabet);
-	}
+	char a;
+
+	for (a = 'a'; a <= 'z' ; a++)
+		putchar(a);
 	putchar('\n');
-	return (0)
+	return (0);
 }
+
