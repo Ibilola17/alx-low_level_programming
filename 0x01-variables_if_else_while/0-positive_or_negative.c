@@ -1,7 +1,4 @@
-/*
- * File: 0-posotive_or_negative.c
- *
- */
+
 
 #include <stdlib.h>
 #include <time.h>
