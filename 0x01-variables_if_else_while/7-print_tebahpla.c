@@ -1,20 +1,16 @@
 #include <stdio.h>
-
 /**
- * main -Prints the alphabet ar reverse
+ * main - entry point
  *
- * Return:Always (Success)
+ * Return: always return 0
  */
 int main(void)
 {
-	char c;
+	char a;
 
-	for(c = 'z'; c >= 'a' ; c--)
-	{
-		putchar(c);
-	}
-
+	for (a = 'z'; a >= 'a'; a--)
+		putchar(a);
 	putchar('\n');
-
 	return (0);
 }
+
