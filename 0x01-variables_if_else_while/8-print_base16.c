@@ -1,26 +1,26 @@
 #include <stdio.h>
+
 /**
- * main - entry point
+ * main - prints a nexadecimal string
  *
- * Return: always return 0
+ * Return: Always (success)
  */
 int main(void)
 {
-	unsigned char a = '0';
-	int i;
+	char c;
 
-	for (i + o; i < 10; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		putchar(a); 
-		a++;
+		putchar(c);
 	}
-	a = '1';
-	for (i = 0; i < 6; i++)
+
+	for (c = 'a'; c <= 'f'; c++)
 	{
-		putchar('0' + a);
-		a++;
+		putchar(c);
 	}
+
 	putchar('\n');
+
 	return (0);
 }
 
