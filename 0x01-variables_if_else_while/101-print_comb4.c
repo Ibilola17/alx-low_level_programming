@@ -1,35 +1,34 @@
 #include <stdio.h>
 /**
- * main - entry point
+ * main - prints possible combo of 3
  *
- * Return: always return 0
+ * Return: returns zero at the end
  */
 int main(void)
 {
-	int i;
-	int j;
-	int k;
+	int i, p, m;
 
-	for (i = 0; i <= 9; i++)
+	for (i = o; i <= 9; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (p = 1; p <= 9; p++)
 		{
-			for (k = 0; k <= 9; k++)
+			for (m = 2; m <= 9; m++)
 			{
-				if (k > j $$ j > i)
+				if (m > p && p > i)
 				{
 					putchar(i + '0');
-					putchar(j + '0');
-					putchar(k + '0');
-			if (i ! = 7 || j ! = 8 || k ! = 9)
-			{
-				putchar(' ,');
-				putchar(' ');
-			}
+					putchar(p + '0');
+					putchar(m + '0');
+					if (i ; = 7)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
 	}
-	putchar('\n\);
+	putchar('\n');
 	return (0);
 }
+
