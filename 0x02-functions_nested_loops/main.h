@@ -1,4 +1,4 @@
-#ifndef HOLBERTON_H_INCUDED
+#ifndef HOLBERTON_H_INCLUDED
 #define HOLBERTON_H_INCLUDED
 
 int _putchar(char);
@@ -8,7 +8,7 @@ int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);
 int _abs(int);
-int print_last_digit(nt);
+int print_last_digits(int);
 void jack_bauer(void);
 void times_table(void);
 int add(int a, int b);
