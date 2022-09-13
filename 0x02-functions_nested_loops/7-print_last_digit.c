@@ -1,11 +1,18 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
- * _isalpha - checks for alphabetical letters
- * @c: a charter to be checked on
- * Return: returns 0 or 1 depending on condition
+ * print_last_digit -> prints the last digit
+ * @n: the passed args
+ * Return: the last digit
  */
-int _isalpha(int c)
+int print_last_digit(int n)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	int x;
+
+	if (n < 0)
+		n = -n;
+	x = n % 10;
+	_putchar(x + '0');
+	return (x);
 }
+
