@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * numLenght - returns the lenght of string
- * @num : operand number
+ * numLength - returns the lenth of string
+ * @num: operand number
  * Return: number of digits
  */
 
-int numLenght(int num)
+int numLength(int num)
 {
 	int lenght = 0;
 
@@ -14,13 +14,14 @@ int numLenght(int num)
 	{
 		return (1);
 	}
-
+	
 	while (num)
 	{
 		num = num / 10;
-		lenght += 1;
+		length += 1;
 	}
-	return (lenght);
+
+	return (length);
 }
 /**
  * *main - prints the first 98 fibonaci sequences
@@ -29,14 +30,14 @@ int numLenght(int num)
 
 int main(void)
 {
-	unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f1o = 0, f2o = 0, tmpo = 0;
+	unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f1o = 0, f20 =0, tmpo = 0;
 	short int i = 1, initial0s;
 
 	while (i <= 98)
 	{
 		if (f1o > 0)
 			printf("%lu", f1o);
-		initial0s = numLength(mx) - 1 - numLength(f1);
+		initial0s = numLength(mx) - 1- numLength(f1);
 		while (f1o > 0 && initial0s > 0)
 		{
 			printf("%i", 0);
@@ -52,10 +53,11 @@ int main(void)
 		f2o = tmpo;
 
 		if (i != 98)
-			printf(",");
+			printf(", ");
 		else
 			printf("\n");
 		i++;
 	}
 	return (0);
 }
+
