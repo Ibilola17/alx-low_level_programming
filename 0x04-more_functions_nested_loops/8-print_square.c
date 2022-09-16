@@ -2,7 +2,7 @@
 
 /**
  * print_square - prints a square followed by a new line
- * @size: size of a square
+ * @size: size of the square
  */
 
 void print_square(int size)
@@ -13,12 +13,12 @@ void print_square(int size)
 		_putchar('\n');
 	else
 	{
-		for (height =0; height < size; height++)
+		for (height = 0; height < size; height++)
 		{
 			for (width = 0; width < size; width++)
-				_putchar('\n');
+				_putchar('#');
+			_putchar('\n');
 		}
 	}
 }
-
 
