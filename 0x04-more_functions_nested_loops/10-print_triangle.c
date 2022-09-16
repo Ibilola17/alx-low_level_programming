@@ -7,23 +7,27 @@
 
 void print_triangle(int size)
 {
-	int hash, index;
+	int i;
+	int j;
+	int k;
 
-	if (size > 0)
+	if (size <= 0)
 	{
-		for (hash = 1; hash <= size; hash++)
+		_putchar('\n');
+	} else
+	{
+
+		for (i = 1; i <= size; i++)
 		{
-			for (index = size - hash; index > 0; index--)
+			for (j = size - i; j > 0; j--)
+			{
 				_putchar(' ');
-
-			for (index = size - hash; index < hash; index++)
+			}
+			for (k = 0; k < i; k++)
+			{
 				_putchar('#');
-
-			if (hash == size)
-				continue;
-
+			}
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
