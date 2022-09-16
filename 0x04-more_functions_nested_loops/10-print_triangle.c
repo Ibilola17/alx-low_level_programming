@@ -3,6 +3,7 @@
 /**
  * print_triangle - Prints a triangle, using the character #.
  * @size: The size of the triangle.
+ * Return: returns nothing
  */
 
 void print_triangle(int size)
