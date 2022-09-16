@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	insigned long num = 612852475143;
+	unsignes long num = 612852475143;
 	unsigned long divisor = 2;
 
 	while (divisor < num)
@@ -20,6 +20,7 @@ int main(void)
 		else
 			divisor++;
 	}
-	printf("%li\n", num);
+	printf("%lu\n", num);
 	return (0);
 }
+
