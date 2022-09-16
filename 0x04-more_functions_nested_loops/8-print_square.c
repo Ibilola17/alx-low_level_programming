@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /** 
- * print_square - print squares
+ * print_square -print squares
  * @size: parameters 
- * Return: returns nothing
+ * Return:returns nothing
  */
 
 void print_square(int size)
