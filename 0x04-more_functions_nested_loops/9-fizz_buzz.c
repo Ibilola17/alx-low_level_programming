@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the numbers from 1 to 100
+ * main - program that prints either number
+ * or Fizz or buzz or fizzbuzz
  * Return: Always 0 (success)
  */
 
