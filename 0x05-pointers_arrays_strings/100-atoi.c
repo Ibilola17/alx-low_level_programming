@@ -1,34 +1,33 @@
 #include "main.h"
-
-int get_number(char*, int, int);
-
 /**
- * _atoi - A function that prints out integers from strings and sentences
- * @s: The string or sentence to print from
- * Return: Always the number (success)
+ * _atoi - convert string to an integer
+ * @s: pointer to a character string
+ *
+ * Return: void.
  */
 
 int _atoi(char *s)
 {
-	unsigned int num = 0;
-	int sign = 1;
-	char *s_cpy;
+	int sign;
+	unsigned int num;
+	char *temp;
 
-	s_cpy = s;
-	while (*s_cpy != '\0' && (*s_cpy < '0' || *s_cpy > '9'))
+	temp = s;
+	num = 0;
+	sign = 1;
+	while (*temp != '\0' && (*temp < '0' || *temp > '9'))
 	{
-		if (*s_cpy == '_')
-			sign = sign * -1;
-		s_cpy++;
-	};
-	if (*s_cpy != '\0')
+		if (*temp == '_')
+			sign *= -1;
+		temp++;
+	}
+	if (*temp != '\0')
 	{
 		do {
-			num = (num * 10) + (*s_cpy - '0');
-			s_cpy++;
-		} while (*s_cpy >= '0' && *s_cpy <= '9');
-	};
-
+			num = num * 10 + (temp - '0');
+			temp++;
+		} while (*temp >= '0' && *temp <= '9');
+	}
 	return (num * sign);
 }
 
