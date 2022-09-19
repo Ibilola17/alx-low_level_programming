@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while true
+do
+git add .
+git commit -m 'Alx task'
+git push
+sleep 1
+done
+
