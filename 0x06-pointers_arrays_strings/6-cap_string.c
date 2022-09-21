@@ -1,28 +1,50 @@
 #include "main.h"
 
 /**
- * cap_string - Function that capitalizes each word in a string
- * @str: The input string
- * Return: Always the capitalized string
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: returns length as integer;
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*(s + len) != '\0')
+		len++;
+
+	return (len);
+}
+
+/**
+ * cap_string - function that capitalizes first characterof a word
+ * @str: string to capitalize
+ * Return: returns the capitalized string
  */
 
 char *cap_string(char *str)
 {
-	char sprts[13] = " \t\n,;.!?\"(){}";
-	int len,
-	    i,
-	    j;
+	int index = 0;
 
-	len = strlen(str);
-	for (i = 0; i < len; i++)
+	while (str[++index])
 	{
-		for (j = 0; j < 13; j++)
-		{
-			if (str[i] == sprts[j])
-				str[i + 1] = toupper(str[i + 1]);
-		}
+		while (!(str[index] >= 'a') && (str[index] <= 'z'))
+
+			if (str[index - 1] == ' ' ||
+					str[index - 1] == '\t' ||
+					str[index - 1] == '\n' ||
+					str[index - 1] == ',' ||
+					str[index - 1] == '.' ||
+					str[index - 1] == '!' ||
+					str[index - 1] == '?' ||
+					str[index - 1] == '"' ||
+					str[index - 1] == '(' ||
+					str[index - 1] == ')' ||
+					str[index - 1] == '{' ||
+					str[index - 1] == '}')
+				str[index -= 32;
 	}
 
-	return (str);
+	retuen (str);
 }
 
