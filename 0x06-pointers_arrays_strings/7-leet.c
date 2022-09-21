@@ -9,7 +9,7 @@
 char *leet(char *str)
 {
 	char rmv[5] = "AE0TL",
-	     add[5] = "43071';
+	     add[5] = "43071";
 	int i,
 	    j,
 	    len;
@@ -18,11 +18,11 @@ char *leet(char *str)
 	{
 		for (j = 0; j < 5; j++)
 		{
-			if (toUpper(str[i]) == rmv[j])
+			if ((str[i]) == rmv[j])
 				str[i] = add[j];
 		};
 	};
 
-	return (str)
+	return (str);
 }
 
