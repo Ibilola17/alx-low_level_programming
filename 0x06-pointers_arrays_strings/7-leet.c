@@ -1,24 +1,28 @@
 #include "main.h"
+
 /**
- * leet - function that encode a string
- * @str:string that will be encoded
- * Return: returns encoded string
+ * leer - A function that encodes a string into 1337
+ * @str: The string to be encoded
+ * Return: The encoded string
  */
 
 char *leet(char *str)
 {
-	int index1 = 0, index2;
-	char leet[8] = {'0', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	char rmv[5] = "AE0TL",
+	     add[5] = "43071';
+	int i,
+	    j,
+	    len;
 
-	while (str[index1])
+	for (i = 0; i < len; i++)
 	{
-		for (index2 = 0; index2 <= 7; index2++)
+		for (j = 0; j < 5; j++)
 		{
-			if (str[index1] == leet[index2] ||
-					str[index1] - 32 == leet[index2])
-				str[index1] = index2 + '0';
-		}
-	}
-	return (str);
+			if (toUpper(str[i]) == rmv[j])
+				str[i] = add[j];
+		};
+	};
+
+	return (str)
 }
 
