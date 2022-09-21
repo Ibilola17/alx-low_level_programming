@@ -4,7 +4,7 @@
  * rot13 - _ _ _
  * @s: _  _ _
  *
- * Return: _ _ _ 
+ * Return: _ _ _
  */
 char *rot13(char *s)
 {
