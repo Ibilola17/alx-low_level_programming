@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * leet - Encodes a string into 1337
@@ -15,7 +15,7 @@ char *leet(char *s)
 
 	while (s[a])
 	{
-		b =0;
+		b = 0;
 
 		while (b < l)
 		{
