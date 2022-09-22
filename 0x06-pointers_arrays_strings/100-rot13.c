@@ -6,7 +6,7 @@
  * Return: The encoded string
  */
 
-char *rot13(char *str)
+char *rot13(char *)
 {
 	char sub[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM",
 	     val[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
