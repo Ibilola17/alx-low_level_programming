@@ -1,31 +1,27 @@
 #include "main.h"
 
 /**
- * rot13 - A function that endodes string into rot13
- * @str: The string to be encoded
- * Return: The encoded string
- */
-
-char *rot13(char *str)
+* rot13 - encodes a string into rot13
+* @s: string to encode task 8
+*
+* Return: Always (s)
+*/
+char *rot13(char *s)
 {
-	char sub[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM",
-	     val[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int i,
-	    j;
+int i, j;
+char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		for (j = 0; j < 52; j++)
-		{
-			if (str[i] == val[j])
-			{
-				str[i] = sub[j];
-				break;
-			};
-
-		};
-	};
-
-	return (str);
+for (i = 0; *(s + i); i++)
+{
+for (j = 0; j < 52; j++)
+{
+if (a[j] == *(s + i))
+{
+*(s + i) = b[j];
+break;
 }
-
+}
+}
+return (s);
+}
