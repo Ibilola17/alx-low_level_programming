@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* *_ strstr - locates a substring
+* *_strstr - locates a substring
 * @haystack: string to search in
 * @needle: substring to look for
 *
@@ -21,7 +21,7 @@ if (haystack[x + y] != needle[y])
 break;
 }
 if (!needle[y])
-	return(&haystack[x]);
+	return (&haystack[x]);
 	}
 return (NULL);
 }
