@@ -6,7 +6,7 @@
  *
  * Return: sqrt of number of -1 for error.
  */
-int helperFunction(int num, intpSqrt)
+int helperFunction(int num, int pSqrt)
 {
 	if ((pSqrt * pSqrt) == num)
 	{
