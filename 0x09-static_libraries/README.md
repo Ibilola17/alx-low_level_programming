@@ -1,1 +1,1 @@
-A file containing 0x09. C - Static libraries
+a file containing 0x09 statics
