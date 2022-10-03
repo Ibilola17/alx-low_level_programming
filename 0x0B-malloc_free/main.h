@@ -9,5 +9,5 @@ char *create_array(unsigned int size, char c);
 int **allow_grid(int width, int height);
 char *argstostr(int ac, char **av);
 
-#endif /* MAIN_H */
+#endif
 
