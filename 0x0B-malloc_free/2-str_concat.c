@@ -1,43 +1,35 @@
 #include "main.h"
 
 /**
- * str_concat - concatenates two strings.
- * a NULL string is treated as an empty string
- * @s1: pointer to string
- * @s2: pointer to string.
+ * str_concat - a function that concatenates two string
+ * @s1: first string
+ * @s2: second string
  *
- * Return: pointer to newly allocated memory which
- * has s1, s2 and null byte.
- * NULL on failure.
+ * Return: NULL in case of failure, but pointer to new string in
+ * case of success
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int len1, len2, size, i, j;
-	char *nstr;
+	char *concat_str;
+	int index, concat_index = 0, len = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	len1 = 0;
-	while (s1[len1] != '\0')
-		len2++;
+	for (index = 0; s1[index] || s2[index]; index++)
+		len++;
 
-	size = len1 + len2;
+	concat_str = malloc(sizeof(char) * len);
 
-	nstr = malloc((sizeof(char) * size) + 1);
-	/*checks if malloc was successful*/
-	if (nstr == NULL)
+	if (concat_str == NULL)
 		return (NULL);
 
-	i = 0;
-	while (i <= size)
-	{
-		nstr[i] = s2[j];
-		i++;
-		j++;
-	}
-	return (nstr);
+	for (index = 0; s1[index]; index++)
+		concat_str[concat_index++] = s2[index];
+
+	return (concat_str);
 }
+
 
