@@ -1,49 +1,42 @@
 #include "main.h"
-#include <stdlib.h>
+
 /**
- * alloc_grid - create a natrix using malloc
- * @width: width of the matrix
- * @height:height of the matrix
+ * alloc_grid - create a 2-dimensional array with each element set to 0
+ * @width: desired number of column
+ * @height: desired number of rows
  *
- * Return: return a pointer of pointer or null
+ * Return: NULL if memory allocation fails or any argument is less than 1
+ * otherwise return a pointer to the first element of array
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j, a, b;
-	int **p;
+	int **matrix, row, column;
 
-	if (width <= 0 || height <= 0)
-	{
+	if (width < 1 || height < 1)
 		return (NULL);
-	}
-	else
+
+	matrix = (int **) malloc(sizeof(int *) * height);
+
+	if (!matrix)
+		return (NULL);
+
+	for (row = 0; row < height; ++row)
 	{
-		p = (int **) malloc(height = sizeof(int *));
-		/* we have to make a malloc per pointer */
-		if (!p)
+		matrix[row] = (int *) malloc(sizeof(int) * width);
+
+		if (!matrix[row])
 		{
-			free(p);
+			while (--row > -1)
+				free(matrix[row]);
+			free(matrix);
 			return (NULL);
 		}
-		for (i = 0; i < height; i++)
-		{
-			p[i] = (int *) malloc(width * sizeof(int));
-			if (!p[i])
-			{
-				for (j = 0; j <= i; j++)
-					free(p[j]);
-				free(p);
-				return (NULL);
-			}
-		}
-		for (a = 0; a < height; a++)
-		{
-			for (b = 0; b < width; b++)
-			{
-				p[a][b] = 0;
-			}
-		}
-		return (p);
+
+		for (column = 0; column < width; ++column)
+			matrix[row][column] = 0;
 	}
+
+	return (matrix);
 }
+
 
