@@ -13,9 +13,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	unsigned int i;
 	char *babypointer;
 
-	if(old_size == new_size)
+	if (old_size == new_size)
 		return (ptr);
-	if(new_size == 0 && ptr != NULL)
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
@@ -33,5 +33,3 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	free(ptr);
 	return (babypointer);
 }
-
-	
