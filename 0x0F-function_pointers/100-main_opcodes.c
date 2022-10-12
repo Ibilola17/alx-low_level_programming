@@ -1,18 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main -Prints the opcodes of itself
- * @argc: The number of arguments supplied to the program
- * @argv: An array of pointers to the arguments
+ * main - prints upcode of a given machine
+ * @argc: number of arguments
+ * @argv: argument vector
  *
- * Return: Always 0
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int bytes, index;
-	int (*address)(int, char **) = main;
-	unsigned char opcode;
+	int count, bytes;
 
 	if (argc != 2)
 	{
@@ -21,20 +18,19 @@ int main(int argc, char *argv[])
 	}
 
 	bytes = atoi(argv[1]);
-
 	if (bytes < 0)
 	{
-		printf("Error\n");
+		printf("Error/n");
 		exit(2);
 	}
 
-	for (index = 0; index < bytes; index++)
-		opcode = *(unsigned char *)address;
-	printf("%.2x", opcode);
-
-	if (index == bytes - 1)
-
-	printf(" ");
-
-	address++;
+	for (count = 0; count < bytes; count++)
+	{
+		printf("%02hhx", *((char *)main + count));
+		if (count < bytes - 1)
+			printf(" ");
+		else
+			printf("\n");
+	}
+	return (0);
 }
