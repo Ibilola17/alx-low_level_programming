@@ -2,16 +2,17 @@
 #include <stdlib.h>
 
 /**
- * main -number of bytes
- * @argc: number of arguments
- * @argv: argument vector
+ * main - program that prints the opcode of its own main function
+ * @argc: number of arguments passed to the program
+ * @argv: array of arguments
  *
- * Return: Always 0(success)
+ * Return: On success, 1 or 2 in case of failure
  */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	char *arr;
+	int index, bytes;
+	int (*address)(int, char**) = main;
+	unsigned char upcode;
 
 	if (argc != 2)
 	{
@@ -23,20 +24,20 @@ int main(int argc, char *argv[])
 
 	if (bytes < 0)
 	{
-		printf("Error/n");
+		printf("Error\n");
 		exit(2);
 	}
 
-	arr = (char *)main;
-
-	for (i = 0; i < bytes; i++)
+	for (index = 0; index < bytes; index++)
 	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n", arr[i]);
-			break;
-		}
-		printf("%02hhx ", arr[i]);
+		upcode = *(unsigned char *)address;
+		printf("%.2x", upcode);
+
+		if (index == bytes - 1)
+			continue;
+		printf(" ");
+		address++;
 	}
+	printf("\n");
 	return (0);
 }
