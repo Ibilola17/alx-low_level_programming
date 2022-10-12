@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - prints its own upcode
+ * main -number of bytes
  * @argc: number of arguments
  * @argv: argument vector
  *
