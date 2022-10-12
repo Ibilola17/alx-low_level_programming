@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - prints upcode of a given machine
+ * main - prints its own upcode
  * @argc: number of arguments
  * @argv: argument vector
  *
